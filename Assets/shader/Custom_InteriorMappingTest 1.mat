@@ -1,0 +1,75 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 6
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: Custom_InteriorMappingTest 1
+  m_Shader: {fileID: 4800000, guid: d12745bce10447249add2bd91f601dc6, type: 3}
+  m_ShaderKeywords: 
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap: {}
+  disabledShaderPasses: []
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BackTex:
+        m_Texture: {fileID: 2800000, guid: 58bd8173d0aeb614ab207535c820d840, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _CeilTex:
+        m_Texture: {fileID: 2800000, guid: 19975a5ff80ab804090ab83bf9515d27, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _FloorTex:
+        m_Texture: {fileID: 2800000, guid: 10875b2929cbbe747bad1c74e5644737, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _FrontObjTex:
+        m_Texture: {fileID: 2800000, guid: 710dd5aef1f49e94b869e878ad2c2aa6, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _FrontTex:
+        m_Texture: {fileID: 2800000, guid: 58bd8173d0aeb614ab207535c820d840, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _LeftTex:
+        m_Texture: {fileID: 2800000, guid: 58bd8173d0aeb614ab207535c820d840, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 5, y: 5}
+        m_Offset: {x: 0, y: 0}
+    - _RightTex:
+        m_Texture: {fileID: 2800000, guid: 58bd8173d0aeb614ab207535c820d840, type: 3}
+        m_Scale: {x: 2, y: 2}
+        m_Offset: {x: 0, y: 0}
+    m_Floats:
+    - _DistanceBetweenWalls: 2
+    - _ObjRate: 1
+    - _Tiles: 1
+    - _ZPlusVal: 0.0001
+    m_Colors:
+    - _BackColor: {r: 1, g: 1, b: 1, a: 1}
+    - _BackVec: {r: 0, g: 0, b: 1, a: 0}
+    - _CeilColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 0}
+    - _FloorColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FrontColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FrontObjColor: {r: 1, g: 1, b: 1, a: 1}
+    - _FrontObjOffset: {r: 0.3, g: 0.3, b: 0.5, a: 0}
+    - _FrontObjVec: {r: 1, g: 0, b: 0, a: 0}
+    - _LeftColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Offset: {r: 0, g: 0, b: 0, a: 0.5}
+    - _OffsetVec: {r: 0, g: 0, b: 0, a: 0}
+    - _RightColor: {r: 1, g: 1, b: 1, a: 1}
+    - _RightVec: {r: 1, g: 0, b: 0, a: 0}
+    - _RoomScale: {r: 0.1, g: 0.1, b: 0.1, a: 0}
+    - _UpVec: {r: 0, g: 1, b: 0, a: 0}
