@@ -101,7 +101,7 @@
 			{
 				float tile = st.x*st.y * 1/_ObjRate;
 				float r = rand(float3(floor( pos.x/between.x + _ZPlusVal), floor( pos.y/between.y + _ZPlusVal), floor(pos.z/between.z + _ZPlusVal)));
-				//if(r>_ObjRate) return 0;
+				if(r>_ObjRate) return 0;
 				r = floor(r*tile) % tile;
 
 					
@@ -284,15 +284,19 @@
 				//書き割り
 				{
 					float3 ObjVec = normalize(_FrontObjVec);
-					float which = step(0.0, dot(rayDir, ObjVec.xyz));
+					float which = 0;//step(0.0, dot(rayDir, ObjVec.xyz));
 					planeNormal = ObjVec.xyz*lerp(1, -1, which);
 					planePos.xyz = 0.0;
-					planePos = ObjVec * ceil(rayPos.z / _RoomScale.z);
+					planePos = ObjVec * ceil(rayPos / _RoomScale);
 					planePos -= ObjVec * lerp(1.0, 0.0, which);
-					planePos.x *= pow(_RoomScale.x,ObjVec.x);
-					planePos.y *= pow(_RoomScale.y,ObjVec.y);
-					planePos.z *= pow(_RoomScale.z,ObjVec.z);
+					planePos.x *= dot(_RoomScale.x,float3(1,0,0));
+					planePos.y *= dot(_RoomScale.y,float3(0,1,0));
+					planePos.z *= dot(_RoomScale.z,float3(0,0,1));
 					planePos += _RoomScale*_FrontObjOffset;
+
+					//planePos.x += frac(abs(i.objectPos.x)*_RoomScale.x)*_RoomScale.x*planeNormal.x;
+					//planePos.y += frac(abs(i.objectPos.y)*_RoomScale.y)*_RoomScale.y*planeNormal.y;
+					//planePos.z += frac(abs(i.objectPos.z)*_RoomScale.z)*_RoomScale.z*planeNormal.z;
 
 					float i = GetIntersectLength(rayPos, rayDir, planePos, planeNormal);
 					if (i < depth && i >0)
